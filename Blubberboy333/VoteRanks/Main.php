@@ -35,14 +35,14 @@ class Main extends PluginBase{
             $this->players->set($player, 1);
 			$this->players->save();
         }else{
-            $this->players->set(intval($this->players->get($player) + 1));
+            $this->players->set($this->getServer()->getPlayer($player)->getName(), intval($this->players->get($player) + 1));
             $this->players->save();
             $rank = $this->getConfig()->get($this->players->get($player));
             if($rank !== null){
                 if($this->getConfig()->get("AdminRank") == "false"){
                     $this->rankUp($player, $this->players->get($player));
                 }else{
-                    if(!($this->getServer()->getPkayer($player)->isOp(true))){
+                    if(!($this->getServer()->getPlayer($player)->isOp(true))){
                         $this->rankUp($player, $this->players->get($player));
                     }
                 }
