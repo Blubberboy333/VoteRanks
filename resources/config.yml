@@ -1,0 +1,19 @@
+# What rank plugin are you using? (PureChat or CustomRanks)
+Plugin: PureChat
+
+# Change an opped player's rank when they rank up?
+AdminRank: false
+
+# Commands to run when a player ranks up
+Commands:
+    - "say {NAME} ranked up!"
+    - "tell {PLAYER} Thank you for voting!"
+
+# Ranks
+# You can add and remove ranks as you wish.
+# AmountOfVotes: RankName
+1: "EliteI"
+3: "EliteII"
+8: "EliteIII"
+12: "EliteIV"
+20: "EliteV"
