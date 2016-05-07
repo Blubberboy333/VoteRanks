@@ -35,7 +35,7 @@ class Main extends PluginBase{
             $this->players->set($player, 1);
 			$this->players->save();
         }else{
-            $this->players->set($this->getServer()->getPlayer($player)->getName(), intval($this->players->get($player) + 1));
+            $this->players->set($player, intval($this->players->get($player) + 1));
             $this->players->save();
             $rank = $this->getConfig()->get($this->players->get($player));
             if($rank !== null){
