@@ -1,0 +1,17 @@
+name: VoteRanks
+version: 1.0.0
+api: [1.0.0, 2.0.0]
+main: Blubberboy333\VoteRanks\Main
+commands:
+    addvote:
+        description: Adds a vote to a player's file
+        usage: /addvote <player>
+        permission: vr.add
+permissions:
+    vr:
+        default: false
+        description: Allows the player to use all of the VoteRanks features
+        children:
+            vr.add:
+                default: op
+                description: Allows the player to add votes to another player
